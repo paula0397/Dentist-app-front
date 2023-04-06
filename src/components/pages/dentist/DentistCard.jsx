@@ -8,10 +8,6 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import LoupeIcon from "@mui/icons-material/Loupe";
-import DeleteIcon from "@mui/icons-material/Delete";
-import { Link } from "react-router-dom";
 import GradeIcon from "@mui/icons-material/Grade";
 import ShareIcon from "@mui/icons-material/Share";
 

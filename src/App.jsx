@@ -4,6 +4,7 @@ import Navbar from './components/layout/Navbar/Nabvar'
 import Dentist from './components/pages/dentist/Dentist'
 import Footer from './components/layout/Footer/Footer'
 import GlobalContextProvider from './context/GlobalContext'
+import DentistDetail from './components/pages/dentistDetail/DentistDetailContainer'
 
 
 function App() { 
@@ -17,7 +18,7 @@ return (
   <Route path='/' element={<h1>Home</h1>} />
   
   <Route path='/dentists' element={<Dentist/>}/>
-  <Route path='/dentist/:id' element={<h1>Profesionales</h1>}/>
+  <Route path='/dentist/:id' element={<DentistDetail/>}/>
   <Route path='/contact' element={<h1>form contact</h1>}/>
   <Route path='/favs' element={<h1> Favoritos</h1>}/>
   </Route>
