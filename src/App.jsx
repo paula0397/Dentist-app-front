@@ -1,24 +1,31 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Dentist from "./components/pages/Dentist"
-import Contact from "./components/pages/Contact"
-import Favs from "./components/pages/Favs"
-import Home from "./components/pages/Home"
+import './App.css'
+import {BrowserRouter,Route, Routes} from "react-router-dom"
+import Navbar from './components/layout/Navbar/Nabvar'
+import Dentist from './components/pages/dentist/Dentist'
+import Footer from './components/layout/Footer/Footer'
+import GlobalContextProvider from './context/GlobalContext'
 
-function App() {
 
-  return (
-    <div className="App">
-      <BrowserRouter>
-      <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/dentist" element={ <Dentist /> } />
-        <Route path="/contact" element={ <Contact /> } />
-        <Route path="/favs" element={ <Favs /> } />
-      </Routes>
-      </BrowserRouter>
-      
-        
-    </div>
+function App() { 
+
+return (
+<BrowserRouter>
+<GlobalContextProvider>
+<Routes>
+  <Route element={<Navbar/>}>
+  <Route element={<Footer/>}>
+  <Route path='/' element={<h1>Home</h1>} />
+  
+  <Route path='/dentists' element={<Dentist/>}/>
+  <Route path='/dentist/:id' element={<h1>Profesionales</h1>}/>
+  <Route path='/contact' element={<h1>form contact</h1>}/>
+  <Route path='/favs' element={<h1> Favoritos</h1>}/>
+  </Route>
+  </Route>
+  <Route path='*' element={<h1>No Found</h1>}/>
+</Routes>
+</GlobalContextProvider>
+</BrowserRouter>
   )
 }
 
