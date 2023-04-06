@@ -10,9 +10,9 @@ const Footer = () => {
   return (
     <div>
       <Outlet />
-    <footer style={{display:"flex",flexDirection:"column",margin:"20px 20px", backgroundColor:"#2438AC"}}>
+    <footer style={{display:"flex",flexDirection:"column",margin:"20px", backgroundColor:"#2438AC"}}>
       <br />
-      <div style={{background:"grey", width:"100%", textAlign:"center"}}>        
+      <div style={{background:"#B6BACD", width:"100%", textAlign:"center"}}>        
         <p className="back" onClick={() => window.scrollTo({top:0,behavior:"smooth"})}>
           Ir hacía arriba
         </p>
