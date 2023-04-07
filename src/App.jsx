@@ -8,6 +8,7 @@ import Contact from './components/pages/contact/Contact'
 import DentistDetailContainer from './components/pages/dentistDetail/DentistDetailContainer'
 
 
+
 function App() { 
 
 return (
@@ -21,6 +22,7 @@ return (
   <Route path='/dentists' element={<Dentist />}/>
   <Route path='/dentist/:id' element={<DentistDetailContainer/>}/>
   <Route path='/contact' element={<Contact />}/>
+
   <Route path='/favs' element={<h1> Favoritos</h1>}/>
   </Route>
   </Route>
