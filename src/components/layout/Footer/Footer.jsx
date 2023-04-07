@@ -7,6 +7,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 
 const Footer = () => {
+
     return (
         <div>
         <Outlet />
@@ -33,3 +34,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
