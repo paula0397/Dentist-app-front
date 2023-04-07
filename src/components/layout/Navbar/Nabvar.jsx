@@ -27,7 +27,7 @@ const Navbar = () => {
                 </Typography >
                 <div style={{ display : "flex" }}>
                 <Link to="/dentists" style={{color : "#1d3557", margin : "0px 30px", textDecoration: "none", fontFamily: 'Raleway' }} ><strong>Home</strong></Link>
-                <Link to="/contact" style={{color : "#1d3557", margin : "0px 30px", textDecoration: "none", fontFamily: 'Raleway'}} ><strong>Contacto</strong></Link>
+                <Link to="/contact" style={{color : "#1d3557", margin : "0px 30px", textDecoration: "none", fontFamily: 'Raleway'}} ><strong>Contact</strong></Link>
                 <Link to="/favs" style={{color : "#1d3557", margin : "0px 30px", textDecoration: "none", fontFamily: 'Raleway'}}><strong>Favs</strong></Link>
                 </div>
 

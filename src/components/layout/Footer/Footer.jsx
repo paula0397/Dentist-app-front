@@ -14,7 +14,7 @@ const Footer = () => {
         <br />
         <div style={{background:"#a8dadc", width:"100%", textAlign:"center" , fontFamily: 'Raleway'}}> <br />        
             <p className="back" onClick={() => window.scrollTo({top:0,behavior:"smooth"})}>
-            Ir hacía arriba
+            ¡Go up!
             </p><br />
         </div>
         <div style={{display:"flex",justifyContent:"space-around", alignItems:"center" }} className="footer.container">

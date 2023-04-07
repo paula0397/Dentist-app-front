@@ -44,10 +44,10 @@ const Contact = () => {
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
-            <TextField label="Enter your name" variant="outlined" fullWidth value={nombre} onChange={onChangeName} />
+            <TextField id="input1" label="Enter your name" variant="outlined" fullWidth value={nombre} onChange={onChangeName} />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <TextField label="enter your email" variant="outlined" fullWidth value={email} onChange={onChangeEmail} />
+            <TextField id="input2" label="Enter your email" variant="outlined" fullWidth value={email} onChange={onChangeEmail} />
           </Grid>
           
         </Grid>
@@ -60,6 +60,8 @@ const Contact = () => {
           >
             Cancel
           </Button>
+          <p id="mensaje_error"></p>
+          <h3 id = "mensaje"> </h3>
         </Stack>
       </Box>
     </div>
