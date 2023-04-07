@@ -10,9 +10,6 @@ console.log (nameApi)
 return (
     <div>
       <DentistCard nameApi={nameApi}/>  
-
-      
-
     </div>
   ) 
 }
