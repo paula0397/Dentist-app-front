@@ -24,6 +24,7 @@ const DentistDetailContainer = () => {
   return (
     <>
       {dentist ? (
+        
 
         <Table 
 

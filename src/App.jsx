@@ -22,7 +22,6 @@ return (
   <Route path='/dentists' element={<Dentist />}/>
   <Route path='/dentist/:id' element={<DentistDetailContainer/>}/>
   <Route path='/contact' element={<Contact />}/>
-
   <Route path='/favs' element={<h1> Favoritos</h1>}/>
   </Route>
   </Route>

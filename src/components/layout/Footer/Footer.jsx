@@ -11,7 +11,7 @@ const Footer = () => {
     return (
         <div>
         <Outlet />
-        <footer style={{display:"flex",flexDirection:"column", width:"100%",margin:"0px", backgroundColor:"white"}}>
+        <footer style={{display:"flex",flexDirection:"column", width:"100%",margin:"0px", backgroundColor:"white", position: "relative", bottom: "0" }}>
         <br />
         <div style={{background:"#a8dadc", width:"100%", textAlign:"center" , fontFamily: 'Raleway'}}> <br />        
             <p className="back" onClick={() => window.scrollTo({top:0,behavior:"smooth"})}>
