@@ -52,6 +52,9 @@ import {
                   <IconButton aria-label="add to favorites">
                     <GradeIcon />
                   </IconButton>
+                  <Link to={`/dentista/${user.id}`}>
+                <Button variant="contained">Ver detalle</Button>
+              </Link>
                 </CardActions>
               </Card>
             </Grid>
