@@ -8,12 +8,9 @@ import {
         IconButton,
         Typography,
     } from "@mui/material";
-    import FavoriteIcon from "@mui/icons-material/Favorite";
-    import LoupeIcon from "@mui/icons-material/Loupe";
-    import DeleteIcon from "@mui/icons-material/Delete";
-    import { Link } from "react-router-dom";
     import GradeIcon from '@mui/icons-material/Grade';
     import ShareIcon from '@mui/icons-material/Share';
+import { Link } from "react-router-dom";
 
     export const DentistCard = (props) => {
         const { nameApi } = props;
@@ -52,9 +49,9 @@ import {
                   <IconButton aria-label="add to favorites">
                     <GradeIcon />
                   </IconButton>
- {/*                  <Link to={`/dentista/${user.id}`}>
-                <Button variant="contained">Ver detalle</Button>
-              </Link> */}
+               <Link to={`/dentist/${id}`}>
+                {nameApi}
+              </Link> 
                 </CardActions>
               </Card>
             </Grid>

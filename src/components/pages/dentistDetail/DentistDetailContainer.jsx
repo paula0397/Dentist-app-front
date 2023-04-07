@@ -33,19 +33,19 @@ const DentistDetailContainer = () => {
           <tr>
             <td style={{ padding: "8px", border: "1px solid black" , background:"#a8dadc", fontFamily: "Raleway"  }}>
               {" "}
-              <strong> Nombre y Apellido{" "} </strong>
+              <strong> Name & Last Name{" "} </strong>
             </td>
             <td style={{ padding: "8px", border: "1px solid black" , background:"#a8dadc", fontFamily: "Raleway"  }}>
               {" "}
-              <strong> Telefono de contacto </strong>
+              <strong> Phone Contact </strong>
             </td>
             <td style={{ padding: "8px", border: "1px solid black" , background:"#a8dadc", fontFamily: "Raleway"  }}>
               {" "}
-              <strong> Correo Electrónico </strong>
+              <strong> Email </strong>
             </td>
             <td style={{ padding: "8px", border: "1px solid black", background:"#a8dadc", fontFamily: "Raleway"   }}>
               {" "}
-              <strong> Pagina Web </strong>
+              <strong> WebSite </strong>
             </td>
           </tr>
 
