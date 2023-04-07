@@ -26,22 +26,21 @@ import {
     
 <Grid container spacing={2}>
         {nameApi.map((item) => {
-            return (
-                <Grid item xs={12} sm={4} md={3} key={item.id}>
-                <Card>
-                    <CardMedia
-                    component="img"
-                    height="194"
-                    image={item.img}
-                    alt={item.title}
-                    src="https://unblast.com/wp-content/uploads/2020/04/Female-Doctor-Vector-Illustration.jpg"
-                    />
-                    <CardContent>
-                    <Typography variant="body2" color="text.secondary" style={ {fontFamily: 'Raleway'} }>
-                        {item.name}
-                    </Typography>
+          return (
+            <Grid item xs={12} sm={4} md={3} key={item.id}>
+              <Card>
+                <CardMedia
+                  component="img"
+                  height="194"
+                  image={item.img}
+                  alt={item.title}
+                  src="https://img.freepik.com/premium-vector/doctor-vector-illustration_488994-153.jpg"
+                />
+                <CardContent>
+                  <Typography variant="body2" color="text.secondary">
+                    {item.name}
+                  </Typography>
 
-<<<<<<< HEAD
                   <Typography variant="body2" color="text.secondary">
                     {item.email}
                   </Typography>
@@ -53,9 +52,9 @@ import {
                   <IconButton aria-label="add to favorites">
                     <GradeIcon />
                   </IconButton>
-                  <Link to={`/dentista/${user.id}`}>
+ {/*                  <Link to={`/dentista/${user.id}`}>
                 <Button variant="contained">Ver detalle</Button>
-              </Link>
+              </Link> */}
                 </CardActions>
               </Card>
             </Grid>
@@ -64,27 +63,6 @@ import {
       </Grid>
     </div>
   );
-=======
-                    <Typography variant="body2" color="text.secondary" style={ {fontFamily: 'Raleway'} }>
-                        {item.email}
-                    </Typography>
-                    </CardContent>
-                    <CardActions disableSpacing>
-                    <IconButton aria-label="share">
-                        <ShareIcon />
-                    </IconButton>
-                    <IconButton aria-label="add to favorites">
-                        <GradeIcon />
-                    </IconButton>
-                    </CardActions>
-                </Card>
-                </Grid>
-            );
-            })}
-        </Grid>
-        </div>
-    );
->>>>>>> refs/remotes/origin/main
 };
 
 export default DentistCard;
