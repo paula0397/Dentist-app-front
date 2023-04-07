@@ -9,11 +9,6 @@ import {
         Typography,
     } from "@mui/material";
     import FavoriteIcon from "@mui/icons-material/Favorite";
-    import LoupeIcon from "@mui/icons-material/Loupe";
-    import DeleteIcon from "@mui/icons-material/Delete";
-    import { Link } from "react-router-dom";
-    import GradeIcon from '@mui/icons-material/Grade';
-    import ShareIcon from '@mui/icons-material/Share';
 
     export const DentistCard = (props) => {
         const { nameApi } = props;
@@ -34,23 +29,20 @@ import {
                     height="194"
                     image={item.img}
                     alt={item.title}
-                    src="https://unblast.com/wp-content/uploads/2020/04/Female-Doctor-Vector-Illustration.jpg"
+                    src="https://res.cloudinary.com/djsppnyg1/image/upload/v1680893199/Female-Doctor-Vector-Illustration_gupswq.jpg"
                     />
                     <CardContent>
                     <Typography variant="body2" color="text.secondary" style={ {fontFamily: 'Raleway'} }>
                         {item.name}
                     </Typography>
 
-                    <Typography variant="body2" color="text.secondary" style={ {fontFamily: 'Raleway'} }>
+                    <Typography variant="body2" color="text.secondary" style={{fontFamily: 'Raleway'}}>
                         {item.email}
                     </Typography>
                     </CardContent>
                     <CardActions disableSpacing>
-                    <IconButton aria-label="share">
-                        <ShareIcon />
-                    </IconButton>
                     <IconButton aria-label="add to favorites">
-                        <GradeIcon />
+                    <FavoriteIcon  />
                     </IconButton>
                     </CardActions>
                 </Card>

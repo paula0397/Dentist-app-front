@@ -34,36 +34,38 @@ const Contact = () => {
     <div className="App"><br />
       <h2 style={ {fontFamily: 'Raleway', textAlign: "center" } }>Want to know more?</h2>
       <p style={ {fontFamily: 'Raleway', textAlign: "center" } } >Send us your email and we will contact you</p><br />
-      <Box onSubmit={onSumbmitForm}
-        sx={{
-          width: "100%",
-          minHeight: "100vh",
-          padding: "10px 30px",
-          backgroundColor: {xs: "red", md: "white" }
-        }}
-      >
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
-            <TextField id="input1" label="Enter your name" variant="outlined" fullWidth value={nombre} onChange={onChangeName} />
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField id="input2" label="Enter your email" variant="outlined" fullWidth value={email} onChange={onChangeEmail} />
-          </Grid>
-          
-        </Grid>
-
-        <Stack spacing={2} sx={{ m: 1 }} direction="row">
-          <Button type='submit' variant="contained">Send</Button>
-          <Button
-            variant="outlined"
+      <form onSubmit={onSumbmitForm}>
+        <Box
+          sx={{
+            width: "100%",
+            minHeight: "100vh",
+            padding: "10px 30px",
+            backgroundColor: {xs: "red", md: "white" }
+          }}
+        >
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <TextField id="input1" label="Enter your name" variant="outlined" fullWidth value={nombre} onChange={onChangeName} />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField id="input2" label="Enter your email" variant="outlined" fullWidth value={email} onChange={onChangeEmail} />
+            </Grid>
             
-          >
-            Cancel
-          </Button>
-          <p id="mensaje_error"></p>
-          <h3 id = "mensaje"> </h3>
-        </Stack>
-      </Box>
+          </Grid>
+
+          <Stack spacing={2} sx={{ m: 1 }} direction="row">
+            <Button type='submit' variant="contained">Send</Button>
+            <Button
+              variant="outlined"
+              
+            >
+              Cancel
+            </Button>
+            <p id="mensaje_error"></p>
+            <h3 id = "mensaje"> </h3>
+          </Stack>
+        </Box>
+      </form>
     </div>
   );
 }
