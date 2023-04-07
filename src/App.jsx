@@ -14,6 +14,7 @@ function App() {
 return (
 <BrowserRouter>
 <GlobalContextProvider>
+
 <Routes>
   <Route element={<Navbar/>}>
   <Route element={<Footer/>}>
@@ -27,6 +28,7 @@ return (
   </Route>
   <Route path='*' element={<h1>No Found</h1>}/>
 </Routes>
+
 </GlobalContextProvider>
 </BrowserRouter>
   )
