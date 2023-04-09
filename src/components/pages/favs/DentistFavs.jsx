@@ -1,9 +1,24 @@
-import React from 'react'
+import React , {useState, useEffect, useContext}from "react";
+import DentistCard from "../dentist/DentistCard";
+
+
 
 const Favs = () => {
-  return (
-    <div>Favs</div>
-  )
-}
+  const [favs, setFavs] = useState([]);
 
-export default Favs
+
+  useEffect(() => {
+    setFavs(JSON.parse(localStorage.getItem('favs')))
+  }, [])
+
+  return (
+    <><br />
+      <h2 style={{ fontFamily: "Raleway", textAlign: "center" }}>Dentists Favs</h2>
+      <div className="card-grid">
+        {favs.map((dentist)=><DentistCard nameApi={dentist} key={dentist.id}/>)}
+      </div>
+    </>
+  );
+};
+
+export default Favs;

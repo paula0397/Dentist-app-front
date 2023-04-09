@@ -31,7 +31,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="App"><br />
+    
+    <div className="App"  ><br /> 
       <h2 style={ {fontFamily: 'Raleway', textAlign: "center" } }>Want to know more?</h2>
       <p style={ {fontFamily: 'Raleway', textAlign: "center" } } >Send us your email and we will contact you</p><br />
       <form onSubmit={onSumbmitForm}>

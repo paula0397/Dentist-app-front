@@ -9,9 +9,9 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 const Footer = () => {
 
     return (
-        <div>
+        <div >
         <Outlet />
-        <footer style={{display:"flex",flexDirection:"column", width:"100%",margin:"0px", backgroundColor:"white", position: "relative", bottom: "0" }}>
+        <footer style={{ display: "flex", flexDirection: "column", width: "100%", margin: "0px", backgroundColor: "white", left: "0", bottom: "0" }}>
         <br />
         <div style={{background:"#a8dadc", width:"100%", textAlign:"center" , fontFamily: 'Raleway'}}> <br />        
             <p className="back" onClick={() => window.scrollTo({top:0,behavior:"smooth"})}>
