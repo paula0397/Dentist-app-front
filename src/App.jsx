@@ -19,7 +19,7 @@ return (
 <Routes>
   <Route element={<Navbar/>}>
   <Route element={<Footer/>}>
-  <Route path='/' element={<h1>Home</h1>} />
+  <Route path="/" element={<Home />} />
   
   <Route path='/dentists' element={<Dentist />}/>
   <Route path='/dentist/:id' element={<DentistDetailContainer/>}/>
@@ -35,4 +35,4 @@ return (
   )
 }
 
-export default App
+export default App;
