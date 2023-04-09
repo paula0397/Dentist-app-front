@@ -16,7 +16,7 @@ const Favs = () => {
       <h2 style={{ fontFamily: "Raleway", textAlign: "center" }}>Dentists Favs</h2>
       <div className="card-grid">
         {favs.map((dentist)=><DentistCard nameApi={dentist} key={dentist.id}/>)}
-      </div>
+      </div><br />
     </>
   );
 };

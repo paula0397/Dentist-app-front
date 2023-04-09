@@ -15,7 +15,7 @@ const globalReducer = (state, action) => {
     case "GET_USERS":
       return { ...state, users: action.payload };
     case "DARK_MODE":
-      return {...state, darkMode: !state.darkMode};
+      return { ...state,isDarkMode:!state.isDarkMode};
 //    case "GET_USER":
 //      return { ...state, user: action.payload };
       case "ADD_FAV":

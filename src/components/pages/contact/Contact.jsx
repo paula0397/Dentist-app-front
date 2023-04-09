@@ -1,12 +1,13 @@
-import { Visibility, VisibilityOff } from '@mui/icons-material';
-import { Box, Button, FormControl, Grid, IconButton, InputAdornment, InputLabel, OutlinedInput, Stack, TextField } from '@mui/material';
-import React, { useState } from 'react'
+import { Box, Button, FormControl, Grid, Stack, TextField } from '@mui/material';
+import React, { useContext, useState } from 'react'
+import { GlobalContext } from '../../../context/GlobalContext';
 
 
 const Contact = () => {
 
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
+  const { state } = useContext(GlobalContext);
 
   const validarNombre = (value) => {
     return value ? value.length > 5 : false;
@@ -31,20 +32,20 @@ const Contact = () => {
   };
 
   return (
+
     
-    <div className="App"  ><br /> 
+    <div className="App"><br /> 
       <h2 style={ {fontFamily: 'Raleway', textAlign: "center" } }>Want to know more?</h2>
       <p style={ {fontFamily: 'Raleway', textAlign: "center" } } >Send us your email and we will contact you</p><br />
-      <form onSubmit={onSumbmitForm}>
-        <Box
+      <form className={state.isDark ? "container-dark":"container-light"} onSubmit={onSumbmitForm}>
+        <Box 
           sx={{
             width: "100%",
             minHeight: "100vh",
-            padding: "10px 30px",
-            backgroundColor: {xs: "red", md: "white" }
+            padding: "10px 30px"
           }}
         >
-          <Grid container spacing={2}>
+          <Grid container spacing={2} >
             <Grid item xs={12} sm={6}>
               <TextField id="input1" label="Enter your name" variant="outlined" fullWidth value={nombre} onChange={onChangeName} />
             </Grid>
@@ -54,7 +55,7 @@ const Contact = () => {
             
           </Grid>
 
-          <Stack spacing={2} sx={{ m: 1 }} direction="row">
+          <Stack spacing={2} sx={{ m: 1 }} direction="row" >
             <Button type='submit' variant="contained">Send</Button>
             <Button
               variant="outlined"

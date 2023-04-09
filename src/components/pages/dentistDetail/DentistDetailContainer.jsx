@@ -1,9 +1,11 @@
 import { Table, TableRow } from "@mui/material";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { GlobalContext } from "../../../context/GlobalContext";
 
 const DentistDetailContainer = () => {
+  const { state } = useContext(GlobalContext);
   const { id } = useParams();
   const [dentist, setDentist] = useState(null);
 
@@ -25,11 +27,9 @@ const DentistDetailContainer = () => {
       {dentist ? (
         
 
-        <Table 
-
-          style={{ border: "2px solid black",maringTop:"50px"}}
+        <Table style={{ border: "2px solid black",maringTop:"50px"}} className={state.isDarkMode ? "container-dark" : "container-light"}
         >
-          <tr>
+          <tr className={state.isDarkMode ? "container-dark" : "container-light"}>
             <td style={{ padding: "8px", border: "1px solid black" , background:"#a8dadc", fontFamily: "Raleway"  }}>
               {" "}
               <strong> Name & Last Name{" "} </strong>

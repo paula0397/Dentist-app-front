@@ -14,11 +14,9 @@ useEffect(()=>{
 ,[state.favs])
 
 return (
-    <div >
+    <div style={{ fontFamily: "Raleway", textAlign: "center", margin: "60px"}}  >
       <Grid container spacing={2}>
       <Grid item xs={12} sm={4} md={3}></Grid></Grid>
-
-      {/* ACA IRIA GRID DEL DENTISTCARD */}
       <h1>HOME</h1>
       <div className='home'>
       {state.users.map((dentist)=><DentistCard nameApi={dentist} key={dentist.id}/>)}</div>

@@ -7,16 +7,20 @@ const label = { inputProps: { "aria-label": "Switch demo" } };
 
 const Navbar = () => {
   const { state, dispatch } = useContext(GlobalContext);
+
+  const handleChange =()=> {
+    dispatch({type: "DARK_MODE"});
+  };
   
 
   return (
-    <div>
-      <nav style={{ width: "100%", padding: "0", margin: "0" }} className={state.darkMode ? "dark" : ""}>
-        <AppBar
+    <div className={state.isDark ? "container-dark":"container-light"}>
+      <nav style={{ width: "100%", padding: "0", margin: "0" }}>
+        <AppBar 
           sx={{ background: "#a8dadc", color: state.ftColor }}
-          position="static"
+          position="static" 
         >
-          <Toolbar>
+          <Toolbar >
             <Typography
               variant="h5"
               noWrap
@@ -58,12 +62,18 @@ const Navbar = () => {
                   margin: "0px 30px",
                   textDecoration: "none",
                   fontFamily: "Raleway",
+                  
+                  
                 }}
               >
                 <strong>Favs</strong>
               </Link>
             </div>
-{             <Switch {...label} defaultChecked color="primary" onClick={()=>dispatch({type:"DARK_MODE"})}/>
+{             <Switch         
+            checked={state.isDark}
+            onChange={handleChange}
+            inputProps={{"aria-label":"controlled"}}
+            />
 }          </Toolbar>
         </AppBar>
       </nav>

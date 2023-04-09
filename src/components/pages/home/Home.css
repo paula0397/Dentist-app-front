@@ -1,0 +1,14 @@
+.container-light{
+    background-color: white;
+    color: #3d3d3d;
+    
+}
+.container-dark{
+    background-color: #3d3d3d;
+    color: white;
+}
+
+form {
+    background-color: #3d3d3d;
+    color: white;
+}

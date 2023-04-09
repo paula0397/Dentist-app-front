@@ -22,12 +22,12 @@ import { GlobalContext } from "../../../context/GlobalContext";
     let validadorDentistaFavRepetido = false;
 
     state.favs.forEach(dentistFav => {
-      if(dentistFav.id == item.id){
-        validadorDentistaFavRepetido = true;
-      }});
+        if(dentistFav.id == item.id){
+            validadorDentistaFavRepetido = true;
+        }});
 
     if(!validadorDentistaFavRepetido){
-      dispatch({type: "ADD_FAV", payload: item})
+        dispatch({type: "ADD_FAV", payload: item})
     }
     }
     const url = "/dentist/" + item.id;
@@ -35,42 +35,40 @@ import { GlobalContext } from "../../../context/GlobalContext";
     return (
         <div>
         
-            <Typography
+            <Typography className={state.isDark ? "container-dark":"container-light"}
                 variant="h5"
                 color="initial"
                 sx={{ margin: "20px", textAlign: "center", fontFamily: "Raleway" }}
             >
             </Typography>
                     
-                    <Card>
+                    <Card  >
                         <Link to={url}>
-                        <CardMedia
+                        <CardMedia className={state.isDarkMode ? "container-dark" : "container-light"} 
                         component="img"
                         height="194"
                         image={item.img}
                         alt={item.title}
-                        src="https://res.cloudinary.com/djsppnyg1/image/upload/v1680893199/Female-Doctor-Vector-Illustration_gupswq.jpg"
+                        src="https://res.cloudinary.com/djsppnyg1/image/upload/v1681077066/IMAGEN_ODONTOLOGA_Mesa_de_trabajo_1_hjai3i.png"
                         />
-                        <CardContent>
-                        <Typography
+                        <CardContent className={state.isDarkMode ? "container-dark" : "container-light"} >
+                        <Typography className={state.isDarkMode ? "container-dark" : "container-light"}
                             variant="body2"
-                            color="text.secondary"
                             style={{ fontFamily: "Raleway" }}
                         >
                             {item.name}
                         </Typography>
 
-                        <Typography
+                        <Typography className={state.isDarkMode ? "container-dark" : "container-light"}
                             variant="body2"
-                            color="text.secondary"
                             style={{ fontFamily: "Raleway" }}
                         >
                             {item.email}
                         </Typography>
                         </CardContent>
                         </Link>
-                        <CardActions disableSpacing>
-                        <IconButton aria-label="add to favorites" onClick={()=>addFav()}>
+                        <CardActions disableSpacing className={state.isDarkMode ? "container-dark" : "container-light"}>
+                        <IconButton style={{color:"gray"}} className={state.isDarkMode ? "container-dark" : "container-light"} aria-label="add to favorites" onClick={()=>addFav()}>
                         <FavoriteIcon />
                         </IconButton>
                         </CardActions>
