@@ -6,6 +6,8 @@ import Footer from "./components/layout/Footer/Footer";
 import GlobalContextProvider from "./context/GlobalContext";
 import Contact from "./components/pages/contact/Contact";
 import DentistDetailContainer from "./components/pages/dentistDetail/DentistDetailContainer";
+import Home from "./components/pages/home/Home";
+
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
           <Route element={<Navbar />}>
             <Route element={<Footer />}>
               <Route path="/" element={<Home />} />
-              <Route index path="/Home" element={<Home />} />
+              <Route index path="/Home" element={<h1>Prueba</h1>} />
 
               <Route path="/dentists" element={<Dentist />} />
               <Route path="/dentist/:id" element={<DentistDetailContainer />} />

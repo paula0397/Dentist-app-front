@@ -3,16 +3,19 @@ import { Link, Outlet } from "react-router-dom";
 import Switch from "@mui/material/Switch";
 import { GlobalContext } from "../../../context/GlobalContext";
 import { AppBar, Toolbar, Typography } from "@mui/material";
-import { TextFormatOutlined } from "@mui/icons-material";
+
 
 const label = { inputProps: { "aria-label": "Switch demo" } };
 
 const Navbar = () => {
   const { state, dispatch } = useContext(GlobalContext);
   
+  const handleChange =()=> {
+    dispatch({type: "DARK_MODE"});
+  };
 
   return (
-    <div>
+    <div className={state.isDark ? "container-dark":"container-light"}>
       <nav style={{ width: "100%", padding: "0", margin: "0" }}>
         <AppBar
           sx={{ background: "#a8dadc", color: state.ftColor }}
@@ -65,7 +68,12 @@ const Navbar = () => {
                 <strong>Favs</strong>
               </Link>
             </div>
-            <Switch {...label} defaultChecked color="secondary" />
+            
+            <Switch         
+            checked={state.isDark}
+            onChange={handleChange}
+            inputProps={{"aria-label":"controlled"}}
+            />
           </Toolbar>
         </AppBar>
       </nav>

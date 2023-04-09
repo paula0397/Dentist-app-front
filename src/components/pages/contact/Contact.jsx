@@ -1,10 +1,11 @@
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { Box, Button, FormControl, Grid, IconButton, InputAdornment, InputLabel, OutlinedInput, Stack, TextField } from '@mui/material';
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { GlobalContext } from '../../../context/GlobalContext';
 
 
 const Contact = () => {
-
+  const { state } = useContext(GlobalContext); 
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
 
@@ -31,10 +32,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="App"><br />
+    <div className={state.isDarkMode ? "container-dark" : "container-light"} ><br />
       <h2 style={ {fontFamily: 'Raleway', textAlign: "center" } }>Want to know more?</h2>
-      <p style={ {fontFamily: 'Raleway', textAlign: "center" } } >Send us your email and we will contact you</p><br />
-      <form onSubmit={onSumbmitForm}>
+      <p style={ {fontFamily: 'Raleway', textAlign: "center" } }>Send us your email and we will contact you</p><br />
+      <form onSubmit={onSumbmitForm} >
         <Box
           sx={{
             width: "100%",
@@ -43,7 +44,7 @@ const Contact = () => {
             backgroundColor: {xs: "red", md: "white" }
           }}
         >
-          <Grid container spacing={2}>
+          <Grid  container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField id="input1" label="Enter your name" variant="outlined" fullWidth value={nombre} onChange={onChangeName} />
             </Grid>

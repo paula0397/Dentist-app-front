@@ -5,7 +5,7 @@ export const GlobalContext = createContext();
 
 const initialState = {
   users: [],
-  darkMode: "light",
+  isDarkMode: false,
   favs: [],
 };
 
@@ -14,13 +14,14 @@ const globalReducer = (state, action) => {
     case "GET_USERS":
       return { ...state, users: action.payload };
     case "DARK_MODE":
-      return { darkMode: state.darkMode === "light" ? "dark" : "light" };
+      return { ...state,isDarkMode:!state.isDarkMode};
     case "GET_USER":
       return { ...state, user: action.payload };
     default:
       return state;
   }
 };
+
 
 const GlobalContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(globalReducer, initialState);
